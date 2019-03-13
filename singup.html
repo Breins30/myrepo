@@ -7,12 +7,20 @@
 	</head>
 
 	<body>
-	
-		<form>
-	
-			<table border="0" align="center">
+
+		<form name="form1" method="post">
 			
-				<th	colspan="3">Formulario de registro</th>
+			<table border="0" align="center">
+				
+				<tr>
+				
+					<td>
+						<br>
+					</td>
+				
+				</tr>
+				
+				<th	colspan="2" align="center">Formulario de registro</th>
 				
 				<tr>
 				
@@ -27,8 +35,8 @@
 					<td>
 						Nombres: <font color="#920000">*</font>
 					</td>
-					<td>
-						<input type="text" name="nomb" required>
+					<td align="right">
+						<input type="text" name="nomb" required pattern="[a-zA-Z]+" title="Letras" style="width:180px">
 					</td>
 				
 				</tr>
@@ -38,21 +46,21 @@
 					<td>
 						Apellidos: <font color="#920000">*</font>
 					</td>
-					<td>
-						<input type="text" name="apell" required>
+					<td align="right">
+						<input type="text" name="apell" required pattern="[a-zA-Z]+" title="Letras" style="width:180px">
 					</td>
 				
 				</tr>
 				
 				<tr>
 				
-					<td>
-						Tipo de identificacion: <font color="#920000">*              </font>
+					<td style="width:230">
+						Tipo de identificación: <font color="#920000">*</font>
 					</td>
-					<td>
-						<select required>
+					<td align="right">
+						<select required name="tipoid" style="width:180px">
 							
-							<option>Documento de identidad.</option>
+							<option value="">Identificación</option>
 							<option value="TI">TI</option>
 							<option value="CC">CC</option>
 							<option value="CE">CE</option>
@@ -64,75 +72,160 @@
 				
 				</tr>
 				
+					<td>
+						Nro. Identificación: <font color="#920000">*</font>
+					</td>
+					<td align="right">
+						<input type="text" name="Nid" required pattern="[0-9]+" title="Numeros" style="width:180px">
+					</td>
+				
 				<tr>
-				
-				
+					
+					<td>
+						Genero: <font color="#920000">*</font>
+					</td>
+					<td align="right">
+						<select required name="genero" style="width:180px">
+							
+							<option value="">Género</option>
+							<option value="masculino">Masculino</option>
+							<option value="femenino">Femenino</option>
+							<option value="otro">Otro</option>
+						
+						</select>
+					</td>
 				
 				</tr>
 				
 				<tr>
 				
-				
-				
-				</tr>
-				
-				<tr>
-				
-				
-				
-				</tr>
-				
-				<tr>
-				
-				
+					<td>
+						Telefono:
+					</td>
+					<td align="right">
+						<input type="text" name="tel" pattern="[0-9]+" title="numeros" style="width:180px">
+					</td>
 				
 				</tr>
 				
 				<tr>
 				
-				
-				
-				</tr>
-				
-				<tr>
-				
-				
-				
-				</tr>
-				
-				<tr>
-				
-				
+					<td>
+						Celular: <font color="#920000">*</font>
+					</td>
+					<td align="right">
+						<input type="text" name="cel" required pattern="[0-9]+" title="Numeros" style="width:180px">
+					</td>
 				
 				</tr>
 				
 				<tr>
 				
-				
+					<td>
+						Departamento nacimiento: <font color="#920000">*</font>
+					</td>
+					<td align="right">
+						<select required name="depto" style="width:180px">
+							
+							<option value="">Departamento</option>
+							<option value="amazonas">Amazonas</option>
+							<option value="antioquia">Antioquia</option>
+							<option value="arauca">Arauca</option>
+							<option value="atlantico">Atlantico</option>
+							<option value="boyaca">Boyaca</option>
+							<option value="cauca">Cauca</option>
+							<option value="cundinamarca">Cundinamarca</option>
+							<option value="nariño">Nariño</option>
+							<option value="putumayo">Putumayo</option>
+							<option value="valle del cauca">Valle del cauca</option>
+						
+						</select>
+					</td>
 				
 				</tr>
 				
 				<tr>
 				
-				
+					<td>
+						Ciudad nacimiento: <font color="#920000">*</font>
+					</td>
+					<td align="right">
+						<select required name="ciudad" style="width:180px">
+							
+							<option value="">Ciudad</option>
+							<option value="arauca">Arauca</option>
+							<option value="barranquilla">Barranquilla</option>
+							<option value="popayan">Popayan</option>
+							<option value="bogota">Bogota</option>
+							<option value="leticia">Leticia</option>
+							<option value="medellin">Medellín</option>
+							<option value="mocoa">Mocoa</option>
+							<option value="pasto">Pasto</option>
+							<option value="tunja">Tunja</option>
+							<option value="cali">Cali</option>
+						
+						</select>
+					</td>
 				
 				</tr>
 				
 				<tr>
 				
-				
+					<td>
+						Correo electronico: <font color="#920000">*</font>
+					</td>
+					<td align="right">
+						<input type="email" name="correo" required style="width:180px">
+					</td>
 				
 				</tr>
 				
 				<tr>
 				
-				
+					<td>
+						Contraseña: <font color="#920000">*</font>
+					</td>
+					<td align="right">
+						<input type="password" name="pass" required style="width:180px">
+					</td>
 				
 				</tr>
 				
 				<tr>
 				
+					<td>
+						Confirmar contraseña: <font color="#920000">*</font>
+					</td>
+					<td align="right">
+						<input type="password" name="passconf" required style="width:180px">
+					</td>
 				
+				</tr>
+				
+				<tr>
+				
+					<td>
+						Foto:
+					</td>
+					<td align="right">
+						<input type="file" name="fot" style="width:180" accept="image/*">
+					</td>
+				
+				</tr>
+				
+				<tr>
+				
+					<td>
+						<br>
+					</td>
+				
+				</tr>
+				
+				<tr>
+				
+					<td colspan="2" align="center">
+						<input type="submit" value="Registrarse" align="center">
+					</td>
 				
 				</tr>
 			
