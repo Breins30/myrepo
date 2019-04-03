@@ -22,17 +22,32 @@
 <?php
 
 	$n=$_POST['num'];
+	$variable=$n;
 
-	echo"<table align='right'><tr>";
+	echo"<table align='right' border='1'>";
+	
+	for($i=1;$i<=$n;$i++){
+		echo "<tr><td>".$i."</td>";
+		echo "<td>".$variable."</td></tr>";
+		$variable--;
+	}
+	
+	echo"</table>";
+	
+	echo"<table align='left' border='1'><tr>";
 	
 	for($i=1;$i<=$n;$i++){
 		echo "<td>".$i."</td>";
 	}
 	
-	for($i=$n;$i==1;$i--){
+	echo"</tr>";
+	
+	echo"<tr>";
+	
+	for($i=$n;$i>0;$i--){
 		echo "<td>".$i."</td>";
 	}
 	
-	echo"</table></tr>";
+	echo"</tr></table>";
 	
 ?>
